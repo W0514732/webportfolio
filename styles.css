@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'Poppins'; 
+    src: url('fonts/Poppins-Regular.ttf') format('truetype'),
+         url('fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins'; 
+    src: url('fonts/Poppins-Bold.ttf') format('truetype'), 
+         url('fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Base Styles*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+
+/* Notes to self */
+
+/* box-shadow: h-offset v-offset blur spread color This is awesome for creating a pop effect */
+
+/* transition: background-color Makes the background color change smoothly */
+
+
+
+
+
+/* Header*/
+
+
+
+header {
+    background-color: #5c6bc0; /* Header background color */
+    color: white; /* White text color */
+    padding: 40px 20px; /* Vertical and horizontal padding */
+    text-align: center; /* Center text in the header */
+}
+
+header h1 {
+    font-size: 36px; /* font size for header title */
+    letter-spacing: 2px; /* letter spacing for the title */
+}
+
+
+
+
+/* Navigation*/
+
+
+nav {
+    background-color: #333; /* Dark background for navigation */
+    text-align: center; /* Center-align navigation items */
+    padding: 10px 0; /* Padding above and below navigation items */
+}
+
+
+/* Styling for the unordered list in the navigation */
+nav ul {
+    list-style-type: none; /* Remove default list bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the navigation items */
+}
+
+
+/* Styling for each list item in the navigation */
+nav ul li {
+    margin: 0 20px; /* Space between navigation items */
+}
+
+
+/* Styling for anchor tags in the navigation */
+nav ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size for links */
+    padding: 12px 18px; /* Padding inside links */
+    transition: background-color 0.3s;
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    background-color: #5c6bc0; /* Change background on hover */
+}
+
+
+
+/* Main Content*/
+
+
+.content {
+    padding: 30px; /* Padding inside the content */
+    max-width: 900px; /* Max width to prevent content from stretching too wide */
+    margin: 40px auto; /* Center content and add vertical margin */
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect around content */
+    border-radius: 8px; /* Rounded corners for content */
+    transition: box-shadow 0.3s ease; /* shadow on hover */
+}
+
+/* Hover effect for the main content */
+.content:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+
+/* Header styles for h2, h3, and h4  */
+
+
+h2, h3, h4 {
+    color: #5c6bc0; /* Blue color for headings */
+    font-size: 28px; /* Font size for subheadings */
+    margin-bottom: 20px; /* Space below headings */
+}
+
+/* Styling for unordered lists */
+ul {
+    list-style-type: disc; /* Bulleted list style */
+}
+
+/* Styling for each list item */
+ul li {
+    margin-bottom: 10px; /* Space below list items */
+}
+
+/* Change color of the list marker (bullet) */
+::marker {
+    color: #5c6bc0; /* Blue color for list bullets */
+}
+
+
+
+
+/* Footer */
+
+
+/* Styling for the footer */
+footer {
+    text-align: center; /* Center-align footer text */
+    padding: 20px; /* Padding inside footer */
+    background-color: #333; /* Dark background color for footer */
+    color: white; /* White text color for footer */
+    font-size: 14px; /* Smaller font size for footer text */
+    margin-top: 40px; /* Add space above footer */
+}
+
+/* Project Samples (G) */
+
+/* Styling for the container of project samples */
+.project-samples-container {
+    margin: 20px; /* Space around the container */
+    padding: 30px; /* Padding inside the container */
+    background-color: #f1f1f1; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect around the container */
+}
+
+/* Layout Grid */
+
+/* Define a 2-column grid layout for the project samples */
+.project-samples-container .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Space between grid items */
+}
+
+/* My Medias - The Big Challenge for a not so good web builder :) */
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 30px; /* Reduce font size */
+    }
+    nav ul li a {
+        font-size: 16px; /* Smaller font size for links */
+        padding: 10px 16px; /* Adjust padding */
+    }
+    .content {
+        padding: 25px; /* Adjust padding for content */
+    }
+}
+
+/* For screens 768px or smaller, stack navigation items vertically */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack the items vertically */
+    }
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for stacked items */
+    }
+    .content {
+        padding: 20px; /* Adjust padding */
+        margin: 20px; /* Adjust margin */
+    }
+    header {
+        padding: 30px 15px; /* Adjust header padding */
+    }
+    header h1 {
+        font-size: 28px; /* Smaller header font */
+    }
+    .project-samples-container .grid-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px; /* Smaller header padding */
+    }
+    nav ul li a {
+        font-size: 14px; /* Smaller font size for links */
+        padding: 8px 12px; /* Smaller padding */
+    }
+    .content {
+        padding: 15px; /* Smaller content padding */
+    }
+    .project-samples-container {
+        margin: 10px; /* Less margin */
+        padding: 20px; /* Less padding */
+    }
+    .project-samples-container .sample {
+        padding: 15px; /* individual items */
+    }
+    .project-samples-container h1 {
+        font-size: 28px; /* title font size */
+    }
+}
+
+/* Styling for individual project items */
+
+
+.project-samples-container .sample {
+    background-color: white; /* White background for each sample */
+    border: 1px solid #ddd; /* border */
+    border-radius: 10px; /* Rounded corners for each sample */
+    padding: 20px; /* Padding inside each sample */
+}
+
+/* Hover effect for each sample item */
+.project-samples-container .sample:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /*shadow on hover */
+}
+
+/* Styling for sample titles */
+.project-samples-container .sample h2 {
+    text-align: center; /* Center-align the sample title */
+    font-size: 20px; /* Font size for the sample title */
+    color: #333; /* Dark text color */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+/* Styling for sample descriptions */
+.project-samples-container .sample p {
+    text-align: center; /* Center-align description text */
+    font-size: 16px; /* Font size for descriptions */
+    line-height: 1.8; /* Line height for readability */
+    color: #333; /* Dark text color */
+}
+
+/* Styling for list inside sample items */
+.project-samples-container .sample ul {
+    text-align: center; /* Center-align list */
+    list-style-type: none; /* Remove default bullets */
+    margin: 15px 0; /* Margin around the list */
+    padding-left: 20px; /* Padding left for the list */
+}
+
+/* Styling for each list item in the sample list */
+.project-samples-container .sample ul li {
+    font-size: 16px; 
+    color: #333;
+}
+
+/* Styling for images inside project samples */
+.project-samples-container img {
+    max-width: 90%; /* Limit image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Giving it a upgrade with block level element */
+    margin: 0 auto; /* Center the image */
+}
+
+.project-samples-container h1 {
+    text-align: center; /* Center-align the title */
+    font-size: 36px; /* Font size for the container title */
+    margin-bottom: 20px; /* Margin below the title */
+}
