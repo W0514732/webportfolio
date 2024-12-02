@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'Poppins'; 
+    src: url('fonts/Poppins-Regular.ttf') format('truetype'),
+         url('fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins'; 
+    src: url('fonts/Poppins-Bold.ttf') format('truetype'), 
+         url('fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Base Styles*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Notes to self */
+
+/* box-shadow: h-offset v-offset blur spread color This is awesome for creating a pop effect */
+
+/* transition: background-color Makes the background color change smoothly */
+
+/* Header*/
+
+header {
+    background-color: #5c6bc0; /* Header background color */
+    color: white; /* White text color */
+    padding: 2.5rem 1.25rem; /* Vertical and horizontal padding */
+    text-align: center; /* Center text in the header */
+}
+
+header h1 {
+    font-size: 2.25rem; /* font size for header title */
+    letter-spacing: 0.125rem; /* letter spacing for the title */
+}
+
+/* Navigation*/
+
+nav {
+    background-color: #333; /* Dark background for navigation */
+    text-align: center; /* Center-align navigation items */
+    padding: 0.625rem 0; /* Padding above and below navigation items */
+}
+
+/* Styling for the unordered list in the navigation */
+nav ul {
+    list-style-type: none; /* Remove default list bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the navigation items */
+}
+
+/* Styling for each list item in the navigation */
+nav ul li {
+    margin: 0 1.25rem; /* Space between navigation items */
+}
+
+/* Styling for anchor tags in the navigation */
+nav ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.125rem; /* Font size for links */
+    padding: 0.75rem 1.125rem; /* Padding inside links */
+    transition: background-color 0.3s;
+    border-radius: 0.3125rem; /* Rounded corners for links */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    background-color: #5c6bc0; /* Change background on hover */
+}
+
+/* Main Content*/
+
+.content {
+    padding: 1.875rem; /* Padding inside the content */
+    max-width: 56.25rem; /* Max width to prevent content from stretching too wide */
+    margin: 2.5rem auto; /* Center content and add vertical margin */
+    background-color: white;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1); /* Shadow effect around content */
+    border-radius: 0.5rem; /* Rounded corners for content */
+    transition: box-shadow 0.3s ease; /* shadow on hover */
+}
+
+/* Hover effect for the main content */
+.content:hover {
+    box-shadow: 0 0.375rem 1.25rem rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Header styles for h2, h3, and h4  */
+
+h2, h3, h4 {
+    color: #5c6bc0; /* Blue color for headings */
+    font-size: 1.75rem; /* Font size for subheadings */
+    margin-bottom: 1.25rem; /* Space below headings */
+}
+
+/* Styling for unordered lists */
+ul {
+    list-style-type: disc; /* Bulleted list style */
+}
+
+/* Styling for each list item */
+ul li {
+    margin-bottom: 0.625rem; /* Space below list items */
+}
+
+/* Change color of the list marker (bullet) */
+::marker {
+    color: #5c6bc0; /* Blue color for list bullets */
+}
+
+/* Footer */
+
+/* Styling for the footer */
+footer {
+    text-align: center; /* Center-align footer text */
+    padding: 1.25rem; /* Padding inside footer */
+    background-color: #333; /* Dark background color for footer */
+    color: white; /* White text color for footer */
+    font-size: 0.875rem; /* Smaller font size for footer text */
+    margin-top: 2.5rem; /* Add space above footer */
+}
+
+/* Project Samples (G) */
+
+/* Styling for the container of project samples */
+.project-samples-container {
+    margin: 1.25rem; /* Space around the container */
+    padding: 1.875rem; /* Padding inside the container */
+    background-color: #f1f1f1; /* Light gray background */
+    border-radius: 0.625rem; /* Rounded corners */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* Shadow effect around the container */
+}
+
+/* Layout Grid */
+
+/* Define a 2-column grid layout for the project samples */
+.project-samples-container .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.875rem; /* Space between grid items */
+}
+
+/* My Medias - The Big Challenge for a not so good web builder :) */
+
+@media (max-width: 64rem) {
+    header h1 {
+        font-size: 1.875rem; /* Reduce font size */
+    }
+    nav ul li a {
+        font-size: 1rem; /* Smaller font size for links */
+        padding: 0.625rem 1rem; /* Adjust padding */
+    }
+    .content {
+        padding: 1.5625rem; /* Adjust padding for content */
+    }
+}
+
+/* For screens 48rem or smaller, stack navigation items vertically */
+@media (max-width: 48rem) {
+    nav ul {
+        flex-direction: column; /* Stack the items vertically */
+    }
+    nav ul li {
+        margin: 0.625rem 0; /* Adjust margin for stacked items */
+    }
+    .content {
+        padding: 1.25rem; /* Adjust padding */
+        margin: 1.25rem; /* Adjust margin */
+    }
+    header {
+        padding: 1.875rem 0.9375rem; /* Adjust header padding */
+    }
+    header h1 {
+        font-size: 1.75rem; /* Smaller header font */
+    }
+    .project-samples-container .grid-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+@media (max-width: 30rem) {
+    header {
+        padding: 1.25rem 0.625rem; /* Smaller header padding */
+    }
+    nav ul li a {
+        font-size: 0.875rem; /* Smaller font size for links */
+        padding: 0.5rem 0.75rem; /* Smaller padding */
+    }
+    .content {
+        padding: 0.9375rem; /* Smaller content padding */
+    }
+    .project-samples-container {
+        margin: 0.625rem; /* Less margin */
+        padding: 1.25rem; /* Less padding */
+    }
+    .project-samples-container .sample {
+        padding: 0.9375rem; /* individual items */
+    }
+    .project-samples-container h1 {
+        font-size: 2.25rem; /* title font size */
+    }
+}
+
+/* Styling for individual project items */
+
+.project-samples-container .sample {
+    background-color: white; /* White background for each sample */
+    border: 1px solid #ddd; /* border */
+    border-radius: 0.625rem; /* Rounded corners for each sample */
+    padding: 1.25rem; /* Padding inside each sample */
+}
+
+/* Hover effect for each sample item */
+.project-samples-container .sample:hover {
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2); /*shadow on hover */
+}
+
+/* Styling for sample titles */
+.project-samples-container .sample h2 {
+    text-align: center; /* Center-align the sample title */
+    font-size: 1.25rem; /* Font size for the sample title */
+    color: #333; /* Dark text color */
+    margin-bottom: 0.9375rem; /* Space below the title */
+}
+
+/* Styling for sample descriptions */
+.project-samples-container .sample p {
+    text-align: center; /* Center-align description text */
+    font-size: 1rem; /* Font size for descriptions */
+    line-height: 1.8; /* Line height for readability */
+    color: #333; /* Dark text color */
+}
+
+/* Styling for list inside sample items */
+.project-samples-container .sample ul {
+    text-align: center; /* Center-align list */
+    list-style-type: none; /* Remove default bullets */
+    margin: 0.9375rem 0; /* Margin around the list */
+    padding-left: 1.25rem; /* Padding left for the list */
+}
+
+/* Styling for each list item in the sample list */
+.project-samples-container .sample ul li {
+    font-size: 1rem; 
+    color: #333;
+}
+
+/* Styling for images inside project samples */
+.project-samples-container img {
+    max-width: 90%; /* Limit image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Giving it a upgrade with block level element */
+    margin: 0 auto; /* Center the image */
+}
+
+.project-samples-container h1 {
+    text-align: center; /* Center-align the title */
+    font-size: 2.25rem; /* Font size for the container title */
+    margin-bottom: 1.25rem; /* Margin below the title */
+}
